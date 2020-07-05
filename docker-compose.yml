@@ -16,7 +16,7 @@ services:
     networks:
       - java-net
     environment:
-      MYSQL_HOST: mysql-standalone
+      MYSQL_HOST: sintval-db
       MYSQL_USER: sa
       MYSQL_PASSWORD: password
       MYSQL_ROOT_PASSWORD: root
