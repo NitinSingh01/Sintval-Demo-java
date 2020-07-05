@@ -1,0 +1,26 @@
+version: "3"
+services: 
+  sintval:
+    build: ./sintval-service
+    links:
+      - sintval-db
+    networks:
+      - java-net
+    ports:
+      - "8080:8080"
+      
+  sintval-db:
+    image: mysql
+    ports:
+      - "3306:3306"
+    networks:
+      - java-net
+    environment:
+      MYSQL_HOST: mysql-standalone
+      MYSQL_USER: sa
+      MYSQL_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: UID
+    
+networks:
+  java-net:

@@ -1,0 +1,4 @@
+Table UID:
+create table UID(first_name varchar(100),last_name varchar(100),uid varchar(100),email varchar(100),otp varchar(6));
+Default request Body:
+{"firstName":"Nitin","lastName":"Singh","uid":"KTUIH789IT","email":"xyz@gmail.com"}
